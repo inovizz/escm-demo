@@ -4,9 +4,10 @@ jobs:
     docker:
       - image: circleci/python:3.8
 
-    working_directory: /app
+    working_directory: /home/circleci/app
 
     steps:
+      - run: mkdir -p /home/circleci/app
       - checkout
 
       - run: pip install -r requirements.txt
