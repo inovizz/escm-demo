@@ -1,0 +1,17 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8
+
+    working_directory: /app
+
+    steps:
+      - checkout
+
+      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-dev.txt
+
+      - run: pytest
+      - run: black --check app/ tests/
+      - run: flake8 app/ tests/
