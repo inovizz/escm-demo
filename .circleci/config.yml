@@ -4,14 +4,25 @@ jobs:
     docker:
       - image: circleci/python:3.8
 
-    working_directory: /home/circleci/app
+    working_directory: /app
 
     steps:
-      - run: mkdir -p /home/circleci/app
       - checkout
 
       - run: pip install -r requirements.txt
       - run: pip install -r requirements-dev.txt
+
+      - run:
+          name: Set Flask environment variables
+          command: |
+            echo 'export FLASK_APP=app/api.py' >> $BASH_ENV
+            echo 'export FLASK_ENV=development' >> $BASH_ENV
+
+      - run:
+          name: Start Flask development server
+          command: |
+            source $BASH_ENV
+            flask run &
 
       - run: pytest
       - run: black --check app/ tests/
