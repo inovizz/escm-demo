@@ -9,8 +9,7 @@ def index():
 
 @app.route("/api")
 def api():
-    data = {"name": "John Doe", 
-            "age": 30, "city": "New York"}
+    data = {"name": "John Doe", "age": 30, "city": "New York"}
     return jsonify(data)
 
 
