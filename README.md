@@ -10,22 +10,16 @@ To get started with this application, you'll need to follow these steps:
 
 git clone https://github.com/myusername/myapp.git
 
-markdown
-Copy code
 
 2. Install the required packages:
 
 pip install -r requirements.txt
 
-markdown
-Copy code
 
 3. Start the Flask development server:
 
 flask run
 
-vbnet
-Copy code
 
 4. Open your web browser and navigate to `http://localhost:5000/` to view the application.
 
@@ -47,8 +41,6 @@ This application includes unit tests to ensure that the code is correct and func
 
 pytest
 
-css
-Copy code
 
 ## Code Quality
 
@@ -57,8 +49,6 @@ This application includes linting and formatting checks to ensure that the code 
 black --check app/ tests/
 flake8 app/ tests/
 
-yaml
-Copy code
 
 ## License
 
