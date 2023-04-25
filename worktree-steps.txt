@@ -1,6 +1,7 @@
-Create a new worktree: git worktree add ~/escm-demo/workspace1 workspace1
-Switch to the new worktree: cd ~/escm-demo/workspace1
-Make changes without affecting the main branch
+Create a new worktree: git worktree add workspace1 -b feature/worktree
+Switch to the new worktree: cd workspace1
+Make changes without affecting the develop branch
+Add changes: git add <file_name>
 Commit changes: git commit -m "my changes"
 Push changes to the remote repository: git push
-Remove the worktree: git worktree remove ~/escm-demo/workspace1
+Remove the worktree: git worktree remove workspace1
