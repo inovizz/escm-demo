@@ -22,3 +22,7 @@ Run pre-commit install in your terminal to set up the pre-commit hook:
 ```sh
 pre-commit install
 ```
+
+## Example
+
+<https://github.com/pre-commit/pre-commit-hooks>
